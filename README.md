@@ -37,7 +37,7 @@ npm start
 
 - **HTML5** 🎨
 - **CSS3** 💅
-- **JavaScript (ES6+)** ⚡
+- **JavaScript ** ⚡
 
 ## 🤝 Contributing
 
