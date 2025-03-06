@@ -2,7 +2,7 @@
 body {
   text-align: center;
   font-family: 'Press Start 2P', cursive; 
-  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  background: linear-gradient(to bottom, #ff3300, #ff0000);
   color: white;
   margin: 0;
   padding: 0;
@@ -18,10 +18,10 @@ h1 {
 canvas {
   display: block;
   margin: auto;
-  border: 5px solid #ffcc00; 
+  border: 5px solid #ff8800; 
   border-radius: 10px;
-  background: radial-gradient(circle, #3a91e9, #1c7cd6);
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); 
+  background: radial-gradient(circle, #44fe00, #ff0073);
+  box-shadow: 0px 0px 20px rgba(0, 191, 255, 0.5); 
 }
 .scoreboard {
   font-size: 18px;
@@ -30,7 +30,7 @@ canvas {
 }
 
 button {
-  background-color: #ffcc00;
+  background-color: #C0C0C0;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -41,6 +41,6 @@ button {
 }
 
 button:hover {
-  background-color: #e6b800;
+  background-color: #0059ff;
   transform: scale(1.1);
 }
