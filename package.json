@@ -1,0 +1,13 @@
+{
+  "name": "ping-pong-game",
+  "version": "1.0.0",
+  "description": "A simple yet fun ping pong game",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
