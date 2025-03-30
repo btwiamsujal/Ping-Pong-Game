@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 600;
 
-const rodWidth = 150, rodHeight = 15;
+const rodWidth = 150, rodHeight = 15; 
 let rodX = (canvas.width - rodWidth) / 2;
 const rodSpeed = 20;
 
@@ -13,7 +13,7 @@ let ballX, ballY, ballSpeedX, ballSpeedY;
 let gameStarted = false;
 
 let score = 0, highScore = getHighScore();
-let playerName = getPlayerName(); // Get player's name
+let playerName = getPlayerName(); // Get player's Name
 
 // Function to Get Player's Name
 function getPlayerName() {
