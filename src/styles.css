@@ -43,3 +43,12 @@ button:hover {
   background-color: #e6b800;
   transform: scale(1.1);
 }
+
+.rod {
+  width: 10px;
+  height: 100px;
+  background-color: #ffcc00;
+  position: absolute;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
