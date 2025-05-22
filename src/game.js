@@ -6,7 +6,7 @@ canvas.height = 600;
 
 const rodWidth = 150, rodHeight = 15; 
 let rodX = (canvas.width - rodWidth) / 2;
-const rodSpeed = 20;
+const rodSpeed = 30;
 
 const ballSize = 12;
 let ballX, ballY, ballSpeedX, ballSpeedY;
@@ -14,6 +14,9 @@ let gameStarted = false;
 
 let score = 0, highScore = getHighScore();
 let playerName = getPlayerName(); // Get player's Name
+
+let rodVelocity = 0;
+const rodFriction = 0.89; // Friction to slow down the rod
 
 // Function to Get Player's Name
 function getPlayerName() {
@@ -52,7 +55,7 @@ function resetBall() {
     ballX = canvas.width / 2;
     ballY = canvas.height / 2;
     ballSpeedX = (Math.random() > 0.5 ? 5 : -5);
-    ballSpeedY = 5; 
+    ballSpeedY = 2; 
 }
 
 function startGame() {
@@ -65,8 +68,8 @@ function startGame() {
 
 // Event Listeners
 document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft" && rodX > 0) rodX -= rodSpeed;
-    if (e.key === "ArrowRight" && rodX + rodWidth < canvas.width) rodX += rodSpeed;
+    if (e.key === "ArrowLeft") rodVelocity = -rodSpeed;
+    if (e.key === "ArrowRight") rodVelocity = rodSpeed;
     if (e.key === "Enter") startGame();
     if (e.key === "r") resetHighScore();
     if (e.key === "n") setPlayerName(); // Change name dynamically
@@ -90,6 +93,16 @@ function update() {
         checkHighScore();
         resetGame();
     }
+
+    // Update rod position based on velocity
+    rodX += rodVelocity;
+
+    // Apply friction to slow down the rod
+    rodVelocity *= rodFriction;
+
+    // Ensure the rod stays within canvas bounds
+    if (rodX < 0) rodX = 0;
+    if (rodX + rodWidth > canvas.width) rodX = canvas.width - rodWidth;
 }
 
 function resetGame() {
